@@ -18,11 +18,12 @@ public class Item {
     public Vente vente;
 
     // @objid ("57e4d00b-2580-4b0c-add4-c905109eb369")
-    public void TrouverArticle() {
+    public void trouverArticle() {
     }
 
     // @objid ("f9304e8e-7c3c-40b3-8f80-2b38431eaf1d")
-    public void EstDisponible() {
+    public boolean estDisponible() {
+        return (this.disponible);
     }
 
     // @objid ("a3ba0232-77b4-4a1c-b08c-66fad078b202")
@@ -31,6 +32,10 @@ public class Item {
 
     // @objid ("b2bcc549-b035-4381-98f0-72f4ce450587")
     public void creerItem() {
+    }
+
+    public String getNom() {
+        return (nom);
     }
 
     // @objid ("3be74a5d-d919-47f8-9e24-2d5ccc8a85c2")

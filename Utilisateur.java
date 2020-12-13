@@ -45,5 +45,8 @@ public class Utilisateur {
     // @objid ("53cfad7a-e850-4965-b308-7127cb18c9f4")
     public void EntrerMotCle() {
     }
-
+ 
+    public String getMail() {
+        return (mail);
+    }
 }

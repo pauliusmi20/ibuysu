@@ -11,11 +11,11 @@ public class Systeme {
     public List<Item> item = new ArrayList<Item> ();
 
     // @objid ("355431cc-bde0-4701-b4fa-743df224f6e5")
-    public void ChercherArticle() {
+    public void chercherArticle() {
     }
 
     // @objid ("f64b2ce2-98a3-4c8a-b6f2-8126d267599f")
-    public void AfficherLesArticles() {
+    public void afficherLesArticles() {
     }
 
     // @objid ("67851bb8-cf57-4887-ae0d-7cb6a886a191")
@@ -67,15 +67,15 @@ public class Systeme {
     }
 
     // @objid ("1997d6a5-242f-4001-8ac4-ed3cd1d29204")
-    public void AfficherLesArticles(String categorie) {
+    public void afficherLesArticles(String categorie) {
     }
 
     // @objid ("e04ab0dc-c477-4e5e-871a-f8fcc7b6d4c3")
-    public void VerifierArticleExistant() {
+    public void verifierArticleExistant() {
     }
 
     // @objid ("3432042a-f445-40d9-9aeb-e36a4d8842cf")
-    public void AfficherNavBarre() {
+    public void afficherNavBarre() {
     }
 
     // @objid ("a3a89fe0-9115-435e-8ca9-d00ec3e3e268")
@@ -111,15 +111,33 @@ public class Systeme {
     }
 
     // @objid ("624b0683-4c62-41dc-a44d-a421381ccef7")
-    public void acheterItem() {
+    public void acheterItem(Item it) {
+        for (Item i : item)
+        {
+            if (i.getNom().equals(it.getNom()))
+            {
+                if (i.estDisponible())
+                {
+                    i.misAjourItem();
+                   affichageConfirmationVente(it);
+                }
+                else
+                    affichageVenteIpossible();
+                break;
+            }
+            
+        }
     }
 
     // @objid ("fa63909a-49ae-4cfb-8e46-d5a20ee27d89")
-    public void affichageConfirmationVente() {
+    public void affichageConfirmationVente(Item it) {
+        System.out.println("L'article est réservé pour vous");
+        System.out.println("Vous pouvez contacter le vendeur par email " + it.vente.vendeur.getMail());
     }
 
     // @objid ("63589f14-34a8-4a6f-bc21-01717ff4cf43")
     public void affichageVenteIpossible() {
+        System.out.println("L'aricle n'est plus disponible, veuillez séléctionner un autre\n");
     }
 
     // @objid ("322a40e5-3efb-40be-b689-cb12663eb0fa")

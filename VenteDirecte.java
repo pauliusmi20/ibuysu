@@ -22,7 +22,8 @@ public class VenteDirecte extends Vente {
     }
 
     // @objid ("65d678e1-4bd4-4df1-a2a1-75773346c735")
-    public void MiseAJour() {
+    public void miseAJour() {
+        setEtat(1);
     }
 
 }

@@ -34,7 +34,7 @@ public class StatuationVente {
     }
 
     // @objid ("f0a48781-09f8-4c78-922a-fcc6600d8fc1")
-    public void StatuerVente() {
+    public void statuerVente() {
     }
 
     // @objid ("da686b3b-ee52-4545-8978-6f4144661605")

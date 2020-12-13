@@ -118,7 +118,7 @@ public class Systeme {
             {
                 if (i.estDisponible())
                 {
-                    i.misAjourItem();
+                    it.vente.miseAJour();
                    affichageConfirmationVente(it);
                 }
                 else

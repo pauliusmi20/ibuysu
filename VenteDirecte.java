@@ -20,10 +20,4 @@ public class VenteDirecte extends Vente {
         super(etat, publication, item, vendeur);
         this.prix = prix;
     }
-
-    // @objid ("65d678e1-4bd4-4df1-a2a1-75773346c735")
-    public void miseAJour() {
-        setEtat(1);
-    }
-
 }
